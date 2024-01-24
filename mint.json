@@ -44,9 +44,7 @@
   "navigation": [
     {
       "group": "Overview",
-      "pages": ["introduction", "usecases", "integration","/user-recharge",
-        "/order-receipt",
-        "/withdrawal-payment"]
+      "pages": ["introduction", "usecases", "integration"]
     },
     {
       "group": "Function Specifics",
