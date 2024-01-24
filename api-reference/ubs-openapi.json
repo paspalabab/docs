@@ -1,0 +1,1458 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Cregis2.0【ubs】",
+    "description": "",
+    "version": "1.0.0"
+  },
+  "tags": [
+    {
+      "name": "支付 pay"
+    },
+    {
+      "name": "支付 pay/收款地址api"
+    },
+    {
+      "name": "支付 pay/收款订单api"
+    },
+    {
+      "name": "支付 pay/转出api"
+    },
+    {
+      "name": "支付 pay/公共api"
+    }
+  ],
+  "paths": {
+    "/pay/api/v1/address/create": {
+      "post": {
+        "summary": "获取充值地址",
+        "x-apifox-folder": "支付 pay/收款地址api",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "depositAddressCreateUsingPOST",
+        "tags": [
+          "支付 pay/收款地址api"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProjectCreateAddressDTO"
+              },
+              "example": ""
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result%C2%ABProjectAddressVO%C2%BB"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apifox-orders": [],
+                  "x-apifox-ignore-properties": []
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apifox-orders": [],
+                  "x-apifox-ignore-properties": []
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apifox-orders": [],
+                  "x-apifox-ignore-properties": []
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apifox-orders": [],
+                  "x-apifox-ignore-properties": []
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/1879836/apis/api-108451335-run"
+      }
+    },
+    "/pay/api/v1/deposit": {
+      "post": {
+        "summary": "获取订单充值地址",
+        "x-apifox-folder": "支付 pay/收款订单api",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "depositUsingPOST",
+        "tags": [
+          "支付 pay/收款订单api"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProjectOrderDTO"
+              },
+              "example": ""
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result%C2%ABProjectOrderVO%C2%BB"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apifox-orders": [],
+                  "x-apifox-ignore-properties": []
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apifox-orders": [],
+                  "x-apifox-ignore-properties": []
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apifox-orders": [],
+                  "x-apifox-ignore-properties": []
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apifox-orders": [],
+                  "x-apifox-ignore-properties": []
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/1879836/apis/api-108451351-run"
+      }
+    },
+    "/pay/api/v1/deposit/cancel": {
+      "post": {
+        "summary": "取消订单",
+        "x-apifox-folder": "支付 pay/收款订单api",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "depositCancelUsingPOST",
+        "tags": [
+          "支付 pay/收款订单api"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProjectOrderQuery"
+              },
+              "example": ""
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result%C2%ABobject%C2%BB"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apifox-orders": [],
+                  "x-apifox-ignore-properties": []
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apifox-orders": [],
+                  "x-apifox-ignore-properties": []
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apifox-orders": [],
+                  "x-apifox-ignore-properties": []
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apifox-orders": [],
+                  "x-apifox-ignore-properties": []
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/1879836/apis/api-108451352-run"
+      }
+    },
+    "/pay/api/v1/deposit/query": {
+      "post": {
+        "summary": "获取订单信息",
+        "x-apifox-folder": "支付 pay/收款订单api",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "depositQueryUsingPOST",
+        "tags": [
+          "支付 pay/收款订单api"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProjectOrderQuery"
+              },
+              "example": ""
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result%C2%ABProjectOrderInfoVO%C2%BB"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apifox-orders": [],
+                  "x-apifox-ignore-properties": []
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apifox-orders": [],
+                  "x-apifox-ignore-properties": []
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apifox-orders": [],
+                  "x-apifox-ignore-properties": []
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apifox-orders": [],
+                  "x-apifox-ignore-properties": []
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/1879836/apis/api-108451353-run"
+      }
+    },
+    "/pay/api/v1/payout": {
+      "post": {
+        "summary": "提币申请",
+        "x-apifox-folder": "支付 pay/转出api",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "payoutUsingPOST",
+        "tags": [
+          "支付 pay/转出api"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WithDrawDTO"
+              },
+              "example": ""
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result%C2%ABWithDrawVO%C2%BB"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apifox-orders": [],
+                  "x-apifox-ignore-properties": []
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apifox-orders": [],
+                  "x-apifox-ignore-properties": []
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apifox-orders": [],
+                  "x-apifox-ignore-properties": []
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apifox-orders": [],
+                  "x-apifox-ignore-properties": []
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/1879836/apis/api-108451362-run"
+      }
+    },
+    "/pay/api/v1/payout/query": {
+      "post": {
+        "summary": "查询提币信息",
+        "x-apifox-folder": "支付 pay/转出api",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "payoutQueryUsingPOST",
+        "tags": [
+          "支付 pay/转出api"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WithDrawQuery"
+              },
+              "example": ""
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result%C2%ABWithDrawInfoVO%C2%BB"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apifox-orders": [],
+                  "x-apifox-ignore-properties": []
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apifox-orders": [],
+                  "x-apifox-ignore-properties": []
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apifox-orders": [],
+                  "x-apifox-ignore-properties": []
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apifox-orders": [],
+                  "x-apifox-ignore-properties": []
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/1879836/apis/api-108451363-run"
+      }
+    },
+    "/pay/api/v1/address/inner": {
+      "post": {
+        "summary": "检测地址是否存在",
+        "x-apifox-folder": "支付 pay/公共api",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "checkAddressExistUsingPOST",
+        "tags": [
+          "支付 pay/公共api"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CheckAddressExistDTO"
+              },
+              "example": ""
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result%C2%ABobject%C2%BB"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apifox-orders": [],
+                  "x-apifox-ignore-properties": []
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apifox-orders": [],
+                  "x-apifox-ignore-properties": []
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apifox-orders": [],
+                  "x-apifox-ignore-properties": []
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apifox-orders": [],
+                  "x-apifox-ignore-properties": []
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/1879836/apis/api-119766028-run"
+      }
+    },
+    "/pay/api/v1/address/legal": {
+      "post": {
+        "summary": "检测地址合法性",
+        "x-apifox-folder": "支付 pay/公共api",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "checkAddressUsingPOST",
+        "tags": [
+          "支付 pay/公共api"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CheckAddressLegalDTO"
+              },
+              "example": ""
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result%C2%ABobject%C2%BB"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apifox-orders": [],
+                  "x-apifox-ignore-properties": []
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apifox-orders": [],
+                  "x-apifox-ignore-properties": []
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apifox-orders": [],
+                  "x-apifox-ignore-properties": []
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apifox-orders": [],
+                  "x-apifox-ignore-properties": []
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/1879836/apis/api-119766029-run"
+      }
+    },
+    "/pay/api/v1/coins": {
+      "post": {
+        "summary": "查询项目支持币种",
+        "x-apifox-folder": "支付 pay/公共api",
+        "x-apifox-status": "released",
+        "deprecated": false,
+        "description": "",
+        "operationId": "coinsUsingPOST",
+        "tags": [
+          "支付 pay/公共api"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProjectCoinsQuery"
+              },
+              "example": ""
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result%C2%ABobject%C2%BB"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apifox-orders": [],
+                  "x-apifox-ignore-properties": []
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apifox-orders": [],
+                  "x-apifox-ignore-properties": []
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apifox-orders": [],
+                  "x-apifox-ignore-properties": []
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apifox-orders": [],
+                  "x-apifox-ignore-properties": []
+                }
+              }
+            }
+          }
+        },
+        "x-run-in-apifox": "https://apifox.com/web/project/1879836/apis/api-119766030-run"
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ProjectCoinsQuery": {
+        "title": "ProjectCoinsQuery",
+        "type": "object",
+        "properties": {
+          "nonce": {
+            "type": "string"
+          },
+          "pid": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "sign": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "x-apifox-orders": [
+          "nonce",
+          "pid",
+          "sign",
+          "timestamp"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "CheckAddressLegalDTO": {
+        "title": "CheckAddressLegalDTO",
+        "type": "object",
+        "properties": {
+          "address": {
+            "type": "string"
+          },
+          "chain_id": {
+            "type": "string"
+          },
+          "nonce": {
+            "type": "string"
+          },
+          "pid": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "sign": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "x-apifox-orders": [
+          "address",
+          "chain_id",
+          "nonce",
+          "pid",
+          "sign",
+          "timestamp"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "CheckAddressExistDTO": {
+        "title": "CheckAddressExistDTO",
+        "type": "object",
+        "properties": {
+          "address": {
+            "type": "string"
+          },
+          "chain_id": {
+            "type": "string"
+          },
+          "nonce": {
+            "type": "string"
+          },
+          "pid": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "sign": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "x-apifox-orders": [
+          "address",
+          "chain_id",
+          "nonce",
+          "pid",
+          "sign",
+          "timestamp"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "Result«WithDrawInfoVO»": {
+        "title": "Result«WithDrawInfoVO»",
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/WithDrawInfoVO"
+          },
+          "msg": {
+            "type": "string"
+          }
+        },
+        "x-apifox-orders": [
+          "code",
+          "data",
+          "msg"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "WithDrawInfoVO": {
+        "title": "WithDrawInfoVO",
+        "type": "object",
+        "properties": {
+          "address": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "string"
+          },
+          "block_height": {
+            "type": "string"
+          },
+          "block_time": {
+            "type": "string"
+          },
+          "chain_id": {
+            "type": "string"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "pid": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "remark": {
+            "type": "string"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "third_party_id": {
+            "type": "string"
+          },
+          "token_id": {
+            "type": "string"
+          },
+          "txid": {
+            "type": "string"
+          }
+        },
+        "x-apifox-orders": [
+          "address",
+          "amount",
+          "block_height",
+          "block_time",
+          "chain_id",
+          "currency",
+          "pid",
+          "remark",
+          "status",
+          "third_party_id",
+          "token_id",
+          "txid"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "WithDrawQuery": {
+        "title": "WithDrawQuery",
+        "required": [
+          "cid",
+          "pid"
+        ],
+        "type": "object",
+        "properties": {
+          "cid": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "nonce": {
+            "type": "string"
+          },
+          "pid": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "sign": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "x-apifox-orders": [
+          "cid",
+          "nonce",
+          "pid",
+          "sign",
+          "timestamp"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "Result«WithDrawVO»": {
+        "title": "Result«WithDrawVO»",
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/WithDrawVO"
+          },
+          "msg": {
+            "type": "string"
+          }
+        },
+        "x-apifox-orders": [
+          "code",
+          "data",
+          "msg"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "WithDrawVO": {
+        "title": "WithDrawVO",
+        "type": "object",
+        "properties": {
+          "cid": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "x-apifox-orders": [
+          "cid"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "WithDrawDTO": {
+        "title": "WithDrawDTO",
+        "required": [
+          "pid"
+        ],
+        "type": "object",
+        "properties": {
+          "address": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "string"
+          },
+          "callback_url": {
+            "type": "string"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "nonce": {
+            "type": "string"
+          },
+          "pid": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "remark": {
+            "type": "string"
+          },
+          "sign": {
+            "type": "string"
+          },
+          "third_party_id": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "x-apifox-orders": [
+          "address",
+          "amount",
+          "callback_url",
+          "currency",
+          "nonce",
+          "pid",
+          "remark",
+          "sign",
+          "third_party_id",
+          "timestamp"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "Result«ProjectOrderInfoVO»": {
+        "title": "Result«ProjectOrderInfoVO»",
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/ProjectOrderInfoVO"
+          },
+          "msg": {
+            "type": "string"
+          }
+        },
+        "x-apifox-orders": [
+          "code",
+          "data",
+          "msg"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "ProjectOrderInfoVO": {
+        "title": "ProjectOrderInfoVO",
+        "type": "object",
+        "properties": {
+          "amount": {
+            "type": "string"
+          },
+          "block_height": {
+            "type": "string"
+          },
+          "block_time": {
+            "type": "string"
+          },
+          "chain_id": {
+            "type": "string"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "pid": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "real_amount": {
+            "type": "string"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "third_party_id": {
+            "type": "string"
+          },
+          "token_id": {
+            "type": "string"
+          },
+          "txid": {
+            "type": "string"
+          }
+        },
+        "x-apifox-orders": [
+          "amount",
+          "block_height",
+          "block_time",
+          "chain_id",
+          "currency",
+          "pid",
+          "real_amount",
+          "status",
+          "third_party_id",
+          "token_id",
+          "txid"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "Result«object»": {
+        "title": "Result«object»",
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "data": {
+            "type": "object",
+            "x-apifox-orders": [],
+            "properties": {},
+            "x-apifox-ignore-properties": []
+          },
+          "msg": {
+            "type": "string"
+          }
+        },
+        "x-apifox-orders": [
+          "code",
+          "data",
+          "msg"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "ProjectOrderQuery": {
+        "title": "ProjectOrderQuery",
+        "required": [
+          "cid"
+        ],
+        "type": "object",
+        "properties": {
+          "cid": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "nonce": {
+            "type": "string"
+          },
+          "pid": {
+            "type": "integer",
+            "description": "项目id",
+            "format": "int64"
+          },
+          "sign": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "x-apifox-orders": [
+          "cid",
+          "nonce",
+          "pid",
+          "sign",
+          "timestamp"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "Result«ProjectOrderVO»": {
+        "title": "Result«ProjectOrderVO»",
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/ProjectOrderVO"
+          },
+          "msg": {
+            "type": "string"
+          }
+        },
+        "x-apifox-orders": [
+          "code",
+          "data",
+          "msg"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "ProjectOrderVO": {
+        "title": "ProjectOrderVO",
+        "type": "object",
+        "properties": {
+          "address": {
+            "type": "string"
+          },
+          "cid": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "x-apifox-orders": [
+          "address",
+          "cid"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "ProjectOrderDTO": {
+        "title": "ProjectOrderDTO",
+        "type": "object",
+        "properties": {
+          "amount": {
+            "type": "string",
+            "description": "付款数量"
+          },
+          "callback_url": {
+            "type": "string",
+            "description": "调用方回调地址"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "nonce": {
+            "type": "string"
+          },
+          "pid": {
+            "type": "integer",
+            "description": "项目id",
+            "format": "int64"
+          },
+          "remark": {
+            "type": "string",
+            "description": "备注"
+          },
+          "sign": {
+            "type": "string"
+          },
+          "third_party_id": {
+            "type": "string",
+            "description": "调用方业务id"
+          },
+          "timeout": {
+            "type": "integer",
+            "description": "超时时间",
+            "format": "int32"
+          },
+          "timestamp": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "x-apifox-orders": [
+          "amount",
+          "callback_url",
+          "currency",
+          "nonce",
+          "pid",
+          "remark",
+          "sign",
+          "third_party_id",
+          "timeout",
+          "timestamp"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "Result«ProjectAddressVO»": {
+        "title": "Result«ProjectAddressVO»",
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/ProjectAddressVO"
+          },
+          "msg": {
+            "type": "string"
+          }
+        },
+        "x-apifox-orders": [
+          "code",
+          "data",
+          "msg"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "ProjectAddressVO": {
+        "title": "ProjectAddressVO",
+        "type": "object",
+        "properties": {
+          "address": {
+            "type": "string"
+          }
+        },
+        "x-apifox-orders": [
+          "address"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      },
+      "ProjectCreateAddressDTO": {
+        "title": "ProjectCreateAddressDTO",
+        "type": "object",
+        "properties": {
+          "alias": {
+            "type": "string",
+            "description": "别名"
+          },
+          "callback_url": {
+            "type": "string",
+            "description": "调用方回调地址"
+          },
+          "chain_id": {
+            "type": "string"
+          },
+          "nonce": {
+            "type": "string"
+          },
+          "pid": {
+            "type": "integer",
+            "description": "项目id",
+            "format": "int64"
+          },
+          "sign": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "x-apifox-orders": [
+          "alias",
+          "callback_url",
+          "chain_id",
+          "nonce",
+          "pid",
+          "sign",
+          "timestamp"
+        ],
+        "x-apifox-ignore-properties": [],
+        "x-apifox-folder": "Schemas"
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "https://t-abcdefgh.cregis.dev"
+    }
+  ]
+}

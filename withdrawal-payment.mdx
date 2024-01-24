@@ -1,0 +1,35 @@
+---
+title: Withdrawal or payment
+# description: 'Thank you for choosing and trusting Cregis. '
+---
+## Usage Scenario <a href="#iv4a-1704960907749" id="iv4a-1704960907749"></a>
+
+For corporate transfers or withdrawals, it is required to operate from the Cregis enterprise wallet. The enterprise wallet strictly manages funds to ensure a reliable and secure fund utilization process. Specific measures include:
+
+1. Strict approval process for disbursement.
+2. Multi-party signature withdrawal based on MPC (Multi-Party Computation) technology guarantee.
+<p align="center">
+<img
+  src="/images/intro05.png"
+  alt="withdrawal or payment scenario" width="1200" height="auto"
+/>
+</p>
+
+## Usage Process <a href="#pwpv-1704960907749" id="pwpv-1704960907749"></a>
+As mentioned above, corporate withdrawals revolve around the enterprise wallet and follow a strict process. The specific process is as follows:
+<p align="center">
+<img alt="Withdrawal or Payment Process" src="/images/intro06.png" alt="" width="600" height="auto"/>
+</p>
+
+1. [Determine Currency Support](/api-reference/request-apis/currency-query)
+   * If not supported, an account cannot be generated.
+2. Verify Target Address Validity
+   * [Confirm whether the target address is a valid address](/api-reference/request-apis/validation-address-legality) on the target blockchain.
+3. Verify Address Ownership
+   * [Determine if the target address belongs to the same project](/api-reference/request-apis/validation-address-existence) (pid).
+   * If restricted to internal transfers, terminate the process at this point.
+4. Initiate Withdrawal/Payment
+   * Submit the [withdrawal request](/api-reference/request-apis/payout-create) to the enterprise wallet.
+5. Withdrawal Query/Monitoring
+   * After the user initiates a withdrawal, the notification callback address will receive a withdrawal status notification.
+   * User can also [query the withdrawl/payment progress](/api-reference/request-apis/payout-query) actively.

@@ -1,0 +1,47 @@
+---
+title: Order receipt
+# description: 'Thank you for choosing and trusting Cregis. '
+---
+## Usage Scenario <a href="#l1fz-1704960774228" id="l1fz-1704960774228"></a>
+
+During a specific time period, the platform recommends assigning a unique exclusive payment address for each order. All payment operations for that order within the time period will revolve around this address. The advantages are as follows:
+
+1. The business system calls the address generation request to assign an exclusive payment address to the order.
+2. For each asset type, a payment account is allocated as the order's payment account address.
+3. The payment account can be reused for the order until it expires, is canceled, or all funds are received, facilitating multiple payments.
+4. The unique correspondence between orders and exclusive addresses ensures clarity in financial transactions.
+
+<p align="center">
+<img
+  src="/images/intro03.png"
+  alt="Order Receipt Scenario" width="1000" height="auto"
+/>
+</p>
+
+## Usage Process <a href="#agvn-1704960774228" id="agvn-1704960774228"></a>
+
+As mentioned above, a unique corresponding payment address will be assigned to each order, typically occurring when creating a new order and requiring the customer to make payment within a specified time period. The specific process is as follows:
+
+<p align="center">
+<img alt="Order Receipt Process" src="/images/intro04.png" alt="" width="450" height="auto"/>
+</p>
+
+1. Create Order
+   * The business system creates an order.
+2. [Determine Currency Support](/api-reference/request-apis/currency-query)
+   * If not supported, the initiation of order payment cannot proceed.
+3. Initiate Order Payment
+   * The business system calls the [order generation request](/api-reference/request-apis/order-deposit-create) to assign an exclusive payment address to the order.
+   * For each asset type, a payment account is allocated as the order's payment account address.
+   * The payment account can be reused for the order until it expires or is canceled, facilitating multiple payments.
+   * The unique correspondence between orders and exclusive addresses ensures clarity in financial transactions.
+4. Monitor/Query Customer Payments
+   * Actively [monitor](/api-reference/callback/order-deposit) or [query](/api-reference/request-apis/order-deposit-query) forthcoming deposits into the payment account.
+   * The order needs to specify a notification callback address.
+5. Customer Payment
+   * Customers can choose to make payments to the order's exclusive account through any third-party wallet.
+6. Payment Notification/Query
+   * After customer payment, the notification callback address will receive a payment notification.
+7. Timeout/Cancelation
+   * After timeout or active [cancelation](/api-reference/request-apis/order-deposit-cancel), the payment action for this order terminates.
+
