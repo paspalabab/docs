@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "Cregis Developer",
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg"
@@ -18,74 +18,106 @@
   "topbarLinks": [
     {
       "name": "Support",
-      "url": "mailto:hi@mintlify.com"
+      "url": "https://chat.bytrack.xyz?appId=7tAbr779"
     }
   ],
   "topbarCtaButton": {
     "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "url": "https://www.cregis.com"
   },
   "tabs": [
     {
-      "name": "API Reference",
+      "name": "API References",
       "url": "api-reference"
+    },
+    {
+      "name": "SDKs and Tools",
+      "url": "sdk-tool"
+    },
+    {
+      "name": "FAQs",
+      "url": "faqs"
     }
   ],
   "anchors": [
-    {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
-    },
-    {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
-    },
-    {
-      "name": "Blog",
-      "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
-    }
   ],
   "navigation": [
     {
-      "group": "Get Started",
+      "group": "Overview",
+      "pages": ["introduction", "usecases", "integration"]
+    },
+    {
+      "group": "Function Specifics",
       "pages": [
-        "introduction",
-        "quickstart",
-        "development"
+        "/user-recharge",
+        "/order-receipt",
+        "/withdrawal-payment"
       ]
     },
     {
-      "group": "Essentials",
+      "group": "Quick Try",
       "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
+        "testing-tool"
       ]
     },
     {
-      "group": "API Documentation",
+      "group": "Commons",
       "pages": [
-        "api-reference/introduction"
+        "api-reference/request",
+        "api-reference/response",
+        "api-reference/signature",
+        "api-reference/return-codes",
+        "api-reference/currency-identifiers"
       ]
     },
     {
-      "group": "Endpoint Examples",
+      "group": "Requests",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
+        "api-reference/request-apis/address-generate",
+        "api-reference/request-apis/order-deposit-create",
+        "api-reference/request-apis/order-deposit-query",
+        "api-reference/request-apis/order-deposit-cancel",
+        "api-reference/request-apis/payout-create",
+        "api-reference/request-apis/payout-query",
+        "api-reference/request-apis/validation-address-existence",
+        "api-reference/request-apis/validation-address-legality",
+        "api-reference/request-apis/currency-query"
+      ]
+    },
+    {
+      "group": "Callbacks",
+      "pages": [
+        "api-reference/callback/address-deposit",
+        "api-reference/callback/order-deposit",
+        "api-reference/callback/payout"
+      ]
+    },
+    {
+      "group": "SDKs",
+      "pages": [
+        "sdk-tool/sdk"
+      ]
+    },
+    {
+      "group": "Tools",
+      "pages": [
+        "sdk-tool/tool"
+      ]
+    },
+    { 
+      "group": "FAQs",
+      "pages": [
+        "faqs/Address",
+        "faqs/Coin",
+        "faqs/Transaction",
+        "faqs/APIKey",
+        "faqs/Callback"
       ]
     }
   ],
   "footerSocials": {
-    "twitter": "https://twitter.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
+    "twitter": "https://twitter.com/0xCregis",
+    "github": "https://github.com/0xcregis",
+    "linkedin": "https://linktr.ee/cregisofficial"
   }
 }
