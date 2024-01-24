@@ -49,9 +49,9 @@
     {
       "group": "Function Specifics",
       "pages": [
-        "/user-recharge",
-        "/order-receipt",
-        "/withdrawal-payment"
+        "user-recharge",
+        "order-receipt",
+        "withdrawal-payment"
       ]
     },
     {
